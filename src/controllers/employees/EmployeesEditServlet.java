@@ -25,7 +25,6 @@ public class EmployeesEditServlet extends HttpServlet {
      */
     public EmployeesEditServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     /**
@@ -34,7 +33,7 @@ public class EmployeesEditServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         EntityManager em = DBUtil.createEntityManager();
 
-        Employee e = em.find(Employee.class,Integer.parseInt(request.getParameter("id")));
+        Employee e = em.find(Employee.class, Integer.parseInt(request.getParameter("id")));
 
         em.close();
 
