@@ -1,5 +1,6 @@
 package models;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -24,7 +25,7 @@ import javax.persistence.Table;
     @NamedQuery(
             name = "getReportsCount",
             query = "SELECT COUNT(r) FROM Report AS r"
-            ),
+            )
 })
 @Entity
 public class Report {
@@ -34,8 +35,11 @@ public class Report {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "employee_id,nullable = false")
+    @JoinColumn(name = "employee_id",nullable = false)
     private Employee employee;
+
+    @Column(name = "report_date",nullable = false)
+    private Date report_date;
 
     @Column(name = "title",length = 255,nullable = false)
     private String title;
@@ -64,6 +68,14 @@ public class Report {
 
     public void setEmployee(Employee employee) {
         this.employee = employee;
+    }
+
+    public Date getReport_date() {
+        return report_date;
+    }
+
+    public void setReport_date(Date report_date) {
+        this.report_date = report_date;
     }
 
     public String getTitle() {
@@ -97,4 +109,5 @@ public class Report {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
 }
