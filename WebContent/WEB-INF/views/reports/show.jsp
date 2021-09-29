@@ -42,6 +42,11 @@
                     <p><a href="<c:url value="/reports/edit?id=${report.id }"   />">この日報を編集する</a></p>
                 </c:if>
             </c:when>
+            <c:otherwise>
+                <h2>お探しのデータは見つかりませんでした。</h2>
+            </c:otherwise>
         </c:choose>
+
+        <p><a href="<c:url value="/reports/index" />">一覧に戻る</a></p>
     </c:param>
 </c:import>

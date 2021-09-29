@@ -14,7 +14,7 @@ body {
 #content {
     width: 94%;
     margin-top: 15px;
-    padding-left: 3%
+    padding-left: 3%;
 }
 
 h1 {
@@ -54,13 +54,13 @@ table {
 
 th{
     width:26%;
-    padding 10px 2%;
+    padding: 10px 2%;
 
 }
 
 td {
-    width: 66%
-    padding: 10px 2%
+    width: 66%;
+    padding: 10px 2%;
 }
 
 button {
@@ -98,7 +98,7 @@ table#employee_list th {
 }
 
 table#employee_list td{
-    width: 29%
+    width: 29%;
     padding: 10px 2%;
 }
 
@@ -136,9 +136,12 @@ select {
 h1 a {
     color: #eeeeee;
 }
+
+
+
 table#report_list th{
     font-weight: bold;
-    padding: 10px 2%
+    padding: 10px 2%;
 }
 table#report_list .report_name {
     width: 20%;
